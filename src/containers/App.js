@@ -23,6 +23,9 @@ class App extends Component {
           <NavBar />
           <Route exact path="/" render={() => <div>Home</div>} />
           <Route path='/movies' render={routerProps => <MoviesPage {...routerProps} movies={this.state.movies}/>} />
+          //if the route matches /movies, then the function inside render is called
+          //the object that is passed in (routerProps), gets passed to the MoviesPage component as a prop
+          //using the spread operator, will result in the creation of props for each key present inside the routerProps object
         </div>
       </Router>
     );
